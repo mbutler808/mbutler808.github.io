@@ -89,11 +89,23 @@ By default, the working directory on a Mac and UNIX/Linux systems is your home u
 
 This is where you currently are in your computerʻs file structure.
 
-First, lets check where we are by listing the files in our current directory:
+First, lets check where we are by listing the files in our current directory. Note that some shell commands differ between different shells (i.e. UNIX vs. PC):
+
+::: {.panel-tabset}
+
+## Mac/UNIX
 
 ```zsh
 ls
 ```
+
+## PC
+
+```
+dir
+```
+
+:::
 
 Please make a folder for your work in a convenient place and call it "Rclass". On a Mac you may want to put it in "Documents". Start by navigating into your Documents folder or other such folder where you want your Rclass work to be saved. **cd** is for *change directory*, and the syntax is **cd Foldername**:
 
@@ -228,7 +240,7 @@ You can use these as starting points or shorthand. For example, "cd ~/Documents"
 - ".." is the directory one level up
 - "./foldername" will take you to the folder one level down, for example "./Data"
 
-You can use these paths to move directories using *cd*  or to list the contents of the directories using *ls* or to make new directories using *mkdir* 
+You can use these paths to move directories using *cd*  or to list the contents of the directories using *ls* or to make new directories using *mkdir*
 
 ```zsh
 ls .
