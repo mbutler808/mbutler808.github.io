@@ -6,7 +6,8 @@
     "about.html": "066133e6"
   },
   "posts/2023-01-17-the-big-picture/index.qmd": {
-    "index.html": "55c5829a"
+    "index.html": "55c5829a",
+    "index.tex": "be0abb26"
   },
   "posts/2023-01-19-your-computer-filesystems/index.qmd": {
     "index.html": "ad0d4808"
