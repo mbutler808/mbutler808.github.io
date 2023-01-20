@@ -89,7 +89,7 @@ By default, the working directory on a Mac and UNIX/Linux systems is your home u
 
 This is where you currently are in your computerʻs file structure.
 
-First, lets check where we are by listing the files in our current directory. Note that some shell commands differ between different shells (i.e. UNIX vs. PC):
+First, lets check where we are by listing the files in our current directory. Note that some shell commands differ between different shells (i.e. UNIX vs. PC).
 
 ::: {.panel-tabset}
 
@@ -101,7 +101,7 @@ ls
 
 ## PC
 
-```
+```zsh
 dir
 ```
 
@@ -130,7 +130,7 @@ ls
 
 And with **dir** in Windows:
 
-```
+```zsh
 dir
 ```
 
@@ -146,7 +146,7 @@ cd shell
 touch dat.txt
 ```
 For Windows, you can create one file like this:
-```
+```zsh
 type nul > dat.txt
 ```
 
