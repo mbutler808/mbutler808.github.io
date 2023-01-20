@@ -123,10 +123,13 @@ cd Rclass
 ```
 
 Listing the contents of a directory is done with **ls** in UNIX:
+
 ```zsh
 ls
 ```
+
 And with **dir** in Windows:
+
 ```
 dir
 ```
