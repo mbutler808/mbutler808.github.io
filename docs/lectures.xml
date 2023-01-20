@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>rclass</title>
+<link>https://mbutler808.github.io/lectures.html</link>
+<atom:link href="https://mbutler808.github.io/lectures.xml" rel="self" type="application/rss+xml"/>
+<description>Course website for Data Science in R for Biologists (ZOOL 710) in Spring 2023</description>
+<generator>quarto-1.2.313</generator>
+<lastBuildDate>Wed, 18 Jan 2023 10:00:00 GMT</lastBuildDate>
+<item>
+  <title>Introduction to your computerʻs terminal utilities</title>
+  <dc:creator>Marguerite Butler</dc:creator>
+  <link>https://mbutler808.github.io/posts/2023-01-19-your-computer-filesystems/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<!-- Add interesting quote -->
+<section id="pre-lecture-materials" class="level1">
+<h1>Pre-lecture materials</h1>
+<section id="read-ahead" class="level3">
+<h3 class="anchored" data-anchor-id="read-ahead">Read ahead</h3>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Read ahead
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>For future lectures, Iʻll give you some reading or podcasts to prepare</strong></p>
+</div>
+</div>
+</section>
+<section id="acknowledgements" class="level3">
+<h3 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h3>
+<p>Material for this lecture was borrowed and adopted from</p>
+<ul>
+<li><a href="https://academind.com/tutorials/terminal-zsh-basics" class="uri">https://academind.com/tutorials/terminal-zsh-basics</a></li>
+</ul>
+</section>
+</section>
+<section id="learning-objectives" class="level1">
+<h1>Learning objectives</h1>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Learning objectives
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>At the end of this lesson you will:</strong></p>
+<ul>
+<li>Know the shell used in your computer`s operating system.</li>
+<li>Know basic shell commands and when you might want to use them.</li>
+<li>Know how to traverse your computer`s filesystem, grab input or put output anywhere.</li>
+<li>Understand the difference between relative and absolute file paths.</li>
+<li>Know how to create and manipulate files through the shell.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="introduction-to-the-shell" class="level1">
+<h1>Introduction to the shell</h1>
+<p>This document gives a brief explanation of your computerʻs filesystems and how we will use the command line for this course.</p>
+<section id="the-kernel" class="level3">
+<h3 class="anchored" data-anchor-id="the-kernel">The kernel</h3>
+<p>The <em>kernel</em> is the part of your computerʻs operating system that loads first once you start up. It is kind of like your computerʻs autonomic nervous system. It recognizes all of the physical hardware attached to it, enables communication between components (and device drivers), and monitors maintenance functions like turning on the fan when it gets hot, manages virtual memory, gives warnings when the hard drive gets full, manages multitasking, and manages security and file permissions. In the mac this is the XNU kernel, in modern Windows machines it is the Windows NT kernel.</p>
+<div class="cell fig-cap-location-top">
+<div class="cell-output-display">
+<p><img src="https://mbutler808.github.io/posts/2023-01-19-your-computer-filesystems/https:/www.linuxandubuntu.com/ezoimgfmt/i0.wp.com/www.linuxandubuntu.com/wp-content/uploads/2019/07/macos-kernel-resources.jpg?w=1295&amp;ssl=1&amp;ezimgfmt=rs:275x519/rscb34/ngcb34/notWebP.png" class="img-fluid"></p>
+</div>
+</div>
+<p>[<a href="https://www.linuxandubuntu.com/home/difference-between-linux-kernel-mac-kernel">Source: Map of MacOS: the heart of everything is called Darwin; and within it, we have separate system utilities and the XNU kernel, which is composed in parts by the Mach kernel and by the BSD kernel.</a>]</p>
+</section>
+<section id="the-shell" class="level3">
+<h3 class="anchored" data-anchor-id="the-shell">The shell</h3>
+<p>The shell is a software (an app) that allows humans to control the computer. You are already familiar with the <em>GUI</em> interface, or the <em>Graphical User Interface</em>. It is important that you are comfortable using the <em>Command Line Interface</em> as well.</p>
+<p>Macs use the same terminal utilities as UNIX/Linux systems. On the Mac, the command line interface app is called <em>Terminal</em>, which you will find in your <em>Application</em> folder, in the <em>Utilities</em> subfolder.</p>
+<div class="cell fig-cap-location-top">
+<div class="cell-output-display">
+<p><img src="https://mbutler808.github.io/posts/2023-01-19-your-computer-filesystems/terminal.png" class="img-fluid" width="986"></p>
+</div>
+</div>
+<p>On a PC you would use the <em>Command Prompt</em> otherwise known as the <em>Windows Command Processor</em> or <em>CMD</em>. If you used a pre-Windows machine, you would be familiar with MS-DOS. To open CMD:</p>
+<ol type="1">
+<li>Open the Start Menu and type “command prompt” or</li>
+<li>Press <strong>Win + R</strong> and type “cmd” in the run box or</li>
+<li>Press <strong>Win + X</strong> and select Command Prompt from the menu.</li>
+</ol>
+<p>Note: you may see <em>Windows PowerShell</em> or <em>Windows Terminal</em> instead, these are similar apps.</p>
+<section id="the-working-directory" class="level4">
+<h4 class="anchored" data-anchor-id="the-working-directory">The Working Directory</h4>
+<p>By default, the working directory on a Mac and UNIX/Linux systems is your home user directory “~”. On a PC the default working directory may looks something like a subdirectory of your C drive “C:[Username]".</p>
+<p>This is where you currently are in your computerʻs file structure.</p>
+<p>First, lets check where we are by listing the files in our current directory:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb1-1"><span class="fu" style="color: #4758AB;">ls</span></span></code></pre></div>
+<p>Please make a folder for your work in a convenient place and call it “Rclass”. On a Mac you may want to put it in “Documents”. Start by navigating into your Documents folder or other such folder where you want your Rclass work to be saved. <strong>cd</strong> is for <em>change directory</em>, and the syntax is <strong>cd Foldername</strong>:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb2-1"><span class="bu" style="color: null;">cd</span> Documents</span></code></pre></div>
+</section>
+<section id="making-a-new-folder-fron-the-command-line" class="level4">
+<h4 class="anchored" data-anchor-id="making-a-new-folder-fron-the-command-line">Making a new folder fron the command Line</h4>
+<p>In both systems, the <strong>mkdir</strong> command for <em>make directory</em> will create a new folder, and <strong>cd</strong> will change directories. :</p>
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb3-1"><span class="fu" style="color: #4758AB;">mkdir</span> Rclass</span>
+<span id="cb3-2"><span class="bu" style="color: null;">cd</span> Rclass</span></code></pre></div>
+<p>Listing the contents of a directory is done with <strong>ls</strong> in UNIX:</p>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb4-1"><span class="fu" style="color: #4758AB;">ls</span></span></code></pre></div>
+<p>And with <strong>dir</strong> in Windows:</p>
+<pre><code>dir</code></pre>
+<p>You have now created the Rclass directory, changed directory again into Rclass, and listed files. (It should be empty.)</p>
+<p>This seems like a lot of trouble, when you can just point and click. But the beauty of the shell is its power. We can automate actions, execute code, and use wildcards to do many at once.</p>
+<p>Letʻs say you wanted to create files in a new subfolder. <strong>touch</strong> is a command that creates a new (empty) file, or alters the timestamp of existing files.</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb6-1"><span class="fu" style="color: #4758AB;">mkdir</span> shell</span>
+<span id="cb6-2"><span class="bu" style="color: null;">cd</span> shell</span>
+<span id="cb6-3"><span class="fu" style="color: #4758AB;">touch</span> dat.txt</span></code></pre></div>
+<p>For Windows, you can create one file like this:</p>
+<pre><code>type nul &gt; dat.txt</code></pre>
+<p>Check that you have a subfolder within Rclass that has one file named dat.txt.</p>
+<p>Suppose we wanted to create 10 files. You can so easily in the UNIX shell:</p>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb8-1"><span class="fu" style="color: #4758AB;">touch</span> dat<span class="dt" style="color: #AD0000;">{</span><span class="dv" style="color: #AD0000;">1</span><span class="dt" style="color: #AD0000;">..</span><span class="dv" style="color: #AD0000;">10</span><span class="dt" style="color: #AD0000;">}</span>.txt</span></code></pre></div>
+<p>To check your files timestamps list files with the -l flag:</p>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb9-1"><span class="fu" style="color: #4758AB;">ls</span> <span class="at" style="color: #657422;">-l</span></span></code></pre></div>
+<p>The -a flag shows hidden files. You can do both at once:</p>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb10-1"><span class="fu" style="color: #4758AB;">ls</span> <span class="at" style="color: #657422;">-la</span></span></code></pre></div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Create 20 files with the .jpg file extension.</li>
+<li>List your files now.</li>
+<li>Create 2 subdirectories, one called “Data” and one called “Images”</li>
+</ol>
+</div>
+</div>
+<p>Some additional very useful commands are those for moving, copying, and removing (deleting) files. These can operate on your current directory, or you can add the <em>path</em> to your file. For example, to move your file into the Data subdirectory:</p>
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb11-1"><span class="fu" style="color: #4758AB;">mv</span> dat1.txt Data/dat1.txt</span>
+<span id="cb11-2"><span class="fu" style="color: #4758AB;">ls</span></span>
+<span id="cb11-3"><span class="fu" style="color: #4758AB;">ls</span> Data</span></code></pre></div>
+<p>Anywhere where you can indicate a filename, you can also add a path to that file.</p>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>function</th>
+<th>UNIX</th>
+<th>Windows CMD</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>move</td>
+<td>mv filename newlocation</td>
+<td>move filename newlocation</td>
+<td>mv dat1.txt Data</td>
+</tr>
+<tr class="even">
+<td>copy</td>
+<td>cp filename newfilename</td>
+<td>copy filename newfilename</td>
+<td>cp dat1.txt catcat.txt</td>
+</tr>
+<tr class="odd">
+<td>remove</td>
+<td>rm filename</td>
+<td>del filename</td>
+<td>rm dat1.txt</td>
+</tr>
+<tr class="even">
+<td>list files</td>
+<td>ls</td>
+<td>dir</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>get working directory</td>
+<td>pwd</td>
+<td>cd</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Note: UNIX commands are case-sensitive, Windows commands are not.</em> <em>Apologies in advance for any Windows command errors - Iʻm really not an expert. Please let me know so I can fix it. Thank you!</em></p>
+</section>
+<section id="wildcards" class="level4">
+<h4 class="anchored" data-anchor-id="wildcards">Wildcards</h4>
+<p>You can also select multiple files at once using wildcards. If you want to grab all of the .txt files, for example, you can do:</p>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb12-1"><span class="fu" style="color: #4758AB;">cp</span> <span class="pp" style="color: #AD0000;">*</span>.txt Data</span>
+<span id="cb12-2"><span class="fu" style="color: #4758AB;">ls</span></span>
+<span id="cb12-3"><span class="fu" style="color: #4758AB;">ls</span> Data</span></code></pre></div>
+<p>And you should have copied <em>all</em> files that end in .txt into Data. You could alternatively used dat* which will select all files that begin with “dat” but can end in anything else. The * will match any characters (zero or more).</p>
+<p>There are a lot of other wildcards that you can use.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Exercise:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Move all of your data files into Data, and all of your image files into Images.</li>
+<li>Remove any straggler files from the top level of shell, if you used the copy command.</li>
+<li>List files from shell, Data, and Images.</li>
+</ol>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="relative-paths-vs.-absolute-paths" class="level1">
+<h1>Relative paths vs.&nbsp;Absolute paths</h1>
+<p>In the Mac, there are two important “shortcuts”. - “/” : The root directory of your entire computer, indicated by “/”. - “~” : The root of your user directory, which for me is “marguerite”. From the root directory, it will be “/Users/username”</p>
+<p>Check out what is in these directories:</p>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb13-1"><span class="fu" style="color: #4758AB;">ls</span> /</span>
+<span id="cb13-2"><span class="fu" style="color: #4758AB;">ls</span> ~</span></code></pre></div>
+<p>A relative path will traverse the file directory <em>relative</em> to where you are currently.</p>
+<p>In contrast, an absolute path will start from the very beginning of your root directory.</p>
+<p>You can use these as starting points or shorthand. For example, “cd ~/Documents” will take you to the Documents folder inside your user directory, regardless of where you are currently because it is an <strong>absolute path</strong>.</p>
+<section id="navigating-your-filedirectories" class="level2">
+<h2 class="anchored" data-anchor-id="navigating-your-filedirectories">Navigating your filedirectories</h2>
+<ul>
+<li>“.” is the current working directory (where you are currently)</li>
+<li>“..” is the directory one level up</li>
+<li>“./foldername” will take you to the folder one level down, for example “./Data”</li>
+</ul>
+<p>You can use these paths to move directories using <em>cd</em> or to list the contents of the directories using <em>ls</em> or to make new directories using <em>mkdir</em></p>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb14-1"><span class="fu" style="color: #4758AB;">ls</span> .</span>
+<span id="cb14-2"><span class="fu" style="color: #4758AB;">ls</span> ./Data</span>
+<span id="cb14-3"><span class="fu" style="color: #4758AB;">mkdir</span> ./Data/A</span></code></pre></div>
+<p>Make multiple directories:</p>
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb15-1"><span class="fu" style="color: #4758AB;">mkdir</span> ./Data/B ./Data/C</span></code></pre></div>
+</section>
+</section>
+<section id="executing-software-from-the-command-line" class="level1">
+<h1>Executing software from the command Line</h1>
+<p>coming soon</p>
+</section>
+<section id="piping-commands" class="level1">
+<h1>Piping commands</h1>
+<p>You can redirect output using <em>&gt;</em> and <em>&lt;</em> with the point indicating the direction. Here is an example. First letʻs put some contents into the files, and check the contents with the command “less” (there is also “more”):</p>
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb16-1"><span class="bu" style="color: null;">echo</span> <span class="st" style="color: #20794D;">"A"</span> <span class="op" style="color: #5E5E5E;">&gt;</span> dat1.txt</span>
+<span id="cb16-2"><span class="fu" style="color: #4758AB;">less</span> dat1.txt</span></code></pre></div>
+<p><em>&gt;</em> pipes (or sends) output to the file named “dat1.txt”. If the file doesnʻt exist, it will create it. If it already exists, it will <em>replace</em> the file.</p>
+<p>If you want to add on to the file, use “&gt;&gt;”</p>
+<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb17-1"><span class="bu" style="color: null;">echo</span> <span class="st" style="color: #20794D;">"Another letter B"</span> <span class="op" style="color: #5E5E5E;">&gt;</span> dat1.txt</span>
+<span id="cb17-2"><span class="fu" style="color: #4758AB;">less</span> dat1.txt</span></code></pre></div>
+<p>Output to multiple files:</p>
+<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb18-1"><span class="bu" style="color: null;">echo</span> <span class="st" style="color: #20794D;">"c"</span> <span class="op" style="color: #5E5E5E;">&gt;</span>dat2.txt <span class="op" style="color: #5E5E5E;">&gt;</span>dat3.txt</span>
+<span id="cb18-2"><span class="fu" style="color: #4758AB;">less</span> dat2.txt</span>
+<span id="cb18-3"><span class="fu" style="color: #4758AB;">less</span> dat3.txt</span></code></pre></div>
+<p>Concatenate (combine) multiple files using <em>cat</em> and send it to file</p>
+<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb19-1"><span class="fu" style="color: #4758AB;">cat</span> dat1.txt dat2.txt dat3.txt</span>
+<span id="cb19-2"><span class="fu" style="color: #4758AB;">cat</span> dat1.txt dat2.txt dat3.txt <span class="op" style="color: #5E5E5E;">&gt;</span>all.txt</span>
+<span id="cb19-3"><span class="fu" style="color: #4758AB;">less</span> all.txt</span></code></pre></div>
+</section>
+<section id="post-lecture-materials" class="level1">
+<h1>Post-lecture materials</h1>
+<section id="final-questions" class="level3">
+<h3 class="anchored" data-anchor-id="final-questions">Final Questions</h3>
+<p>Here are some post-lecture questions to help you think about the material discussed.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p>What is a command line interface?</p></li>
+<li><p>How can using the command line help with file organization or reorganization?</p></li>
+<li><p>What is the importance of choosing a good file naming system?</p></li>
+<li><p>What is the difference between a relative path and an absolute path?</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="additional-resources" class="level3">
+<h3 class="anchored" data-anchor-id="additional-resources">Additional Resources</h3>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><a href="https://academind.com/tutorials/terminal-zsh-basics">A tutorial for zsh on Macs</a></li>
+<li><a href="https://www.educative.io/blog/bash-shell-command-cheat-sheet">Bash shell cheat sheet (mostly works for zsh too)</a></li>
+<li><a href="https://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/">A tutorial for CMD on PCs</a></li>
+<li><a href="https://serverspace.us/support/help/windows-cmd-commands-cheat-sheet/">Windows CMD cheat sheet</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="rtistry" class="level2">
+<h2 class="anchored" data-anchor-id="rtistry">rtistry</h2>
+<div class="cell fig-cap-location-top">
+<div class="cell-output-display">
+<p><img src="https://mbutler808.github.io/posts/2023-01-19-your-computer-filesystems/https:/github.com/djnavarro/art/raw/master/static/gallery/flametree/extra/001_flametree_20_13.jpg" class="img-fluid"></p>
+</div>
+</div>
+<p>[‘Flametree’ from Danielle Navarro <a href="https://art.djnavarro.net" class="uri">https://art.djnavarro.net</a>]</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>module 1</category>
+  <category>week 1</category>
+  <category>programming</category>
+  <category>filesystem</category>
+  <category>shell</category>
+  <guid>https://mbutler808.github.io/posts/2023-01-19-your-computer-filesystems/index.html</guid>
+  <pubDate>Wed, 18 Jan 2023 10:00:00 GMT</pubDate>
+</item>
+<item>
+  <title></title>
+  <dc:creator>Marguerite Butler</dc:creator>
+  <link>https://mbutler808.github.io/posts/2023-01-17-the-big-picture/index.html</link>
+  <description><![CDATA[ undefined ]]></description>
+  <guid>https://mbutler808.github.io/posts/2023-01-17-the-big-picture/index.html</guid>
+  <pubDate>Fri, 20 Jan 2023 09:58:53 GMT</pubDate>
+  <media:content url="https://mbutler808.github.io/posts/2023-01-17-the-big-picture/whole-game.png" medium="image" type="image/png" height="49" width="144"/>
+</item>
+</channel>
+</rss>

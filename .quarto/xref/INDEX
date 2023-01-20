@@ -4,5 +4,26 @@
   },
   "about.qmd": {
     "about.html": "066133e6"
+  },
+  "posts/2023-01-17-the-big-picture/index.qmd": {
+    "index.html": "55c5829a"
+  },
+  "posts/2023-01-19-your-computer-filesystems/index.qmd": {
+    "index.html": "ad0d4808"
+  },
+  "projects.qmd": {
+    "projects.html": "880ee8ab"
+  },
+  "lectures.qmd": {
+    "lectures.html": "f5faffd9"
+  },
+  "syllabus.qmd": {
+    "syllabus.html": "780b5187"
+  },
+  "resources.qmd": {
+    "resources.html": "e277da6f"
+  },
+  "schedule.qmd": {
+    "schedule.html": "6846c609"
   }
 }

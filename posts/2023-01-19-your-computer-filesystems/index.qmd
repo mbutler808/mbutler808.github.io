@@ -1,0 +1,317 @@
+---
+title: "Introduction to your computerʻs terminal utilities"
+author:
+  - name: Marguerite Butler
+    url: https://butlerlab.org
+    affiliation: School of Life Sciences, University of Hawaii
+    affiliation_url: https://manoa.hawaii.edu/lifesciences/
+description: "So much power; or how I got my computer to do my bidding"
+date: 2023-01-18
+# image: "../../images/happygitwithr.png"
+categories: [module 1, week 1, programming, filesystem, shell]
+---
+
+<!-- Add interesting quote -->
+
+# Pre-lecture materials
+
+### Read ahead
+
+::: callout-note
+## Read ahead
+
+**For future lectures, Iʻll give you some reading or podcasts to prepare**
+
+:::
+
+### Acknowledgements
+
+Material for this lecture was borrowed and adopted from
+
+-   <https://academind.com/tutorials/terminal-zsh-basics>
+
+# Learning objectives
+
+::: callout-note
+# Learning objectives
+
+**At the end of this lesson you will:**
+
+-   Know the shell used in your computer`s operating system.
+-   Know basic shell commands and when you might want to use them.
+-   Know how to traverse your computer`s filesystem, grab input or put output anywhere.
+-   Understand the difference between relative and absolute file paths.
+-   Know how to create and manipulate files through the shell.
+:::
+
+# Introduction to the shell
+
+This document gives a brief explanation of your computerʻs filesystems and how we will use the command line for this course.
+
+### The kernel
+
+The *kernel* is the part of your computerʻs operating system that loads first once you start up. It is kind of like your computerʻs autonomic nervous system. It recognizes all of the physical hardware attached to it, enables communication between components (and device drivers), and monitors maintenance functions like turning on the fan when it gets hot, manages virtual memory, gives warnings when the hard drive gets full, manages multitasking, and manages security and file permissions. In the mac this is the XNU kernel, in modern Windows machines it is the Windows NT kernel.
+
+```{r}
+#| label: MacOSguts
+#| echo: false
+#| fig-cap-location: "top"
+knitr::include_graphics("https://www.linuxandubuntu.com/ezoimgfmt/i0.wp.com/www.linuxandubuntu.com/wp-content/uploads/2019/07/macos-kernel-resources.jpg?w=1295&ssl=1&ezimgfmt=rs:275x519/rscb34/ngcb34/notWebP")
+```
+\[[Source: Map of MacOS: the heart of everything is called Darwin; and within it, we have separate system utilities and the XNU kernel, which is composed in parts by the Mach kernel and by the BSD kernel.](https://www.linuxandubuntu.com/home/difference-between-linux-kernel-mac-kernel)\]
+
+
+### The shell
+
+The shell is a software (an app) that allows humans to control the computer. You are already familiar with the *GUI* interface, or the *Graphical User Interface*. It is important that you are comfortable using the *Command Line Interface* as well.
+
+Macs use the same terminal utilities as UNIX/Linux systems. On the Mac, the command line interface app is called *Terminal*, which you will find in your *Application* folder, in the *Utilities* subfolder.
+
+```{r}
+#| label: Terminal
+#| echo: false
+#| fig-cap-location: "top"
+knitr::include_graphics("terminal.png")
+```
+
+On a PC you would use the *Command Prompt* otherwise known as the *Windows Command Processor* or *CMD*. If you used a pre-Windows machine, you would be familiar with MS-DOS. To open CMD:
+
+1. Open the Start Menu and type "command prompt" or
+2. Press **Win + R** and type "cmd" in the run box or
+3. Press **Win + X** and select Command Prompt from the menu.
+
+Note: you may see *Windows PowerShell* or *Windows Terminal* instead, these are similar apps.
+
+
+#### The Working Directory
+
+By default, the working directory on a Mac and UNIX/Linux systems is your home user directory "\~". On a PC the default working directory may looks something like a subdirectory of your C drive "C:\Users\[Username]\".
+
+This is where you currently are in your computerʻs file structure.
+
+First, lets check where we are by listing the files in our current directory:
+
+```zsh
+ls
+```
+
+Please make a folder for your work in a convenient place and call it "Rclass". On a Mac you may want to put it in "Documents". Start by navigating into your Documents folder or other such folder where you want your Rclass work to be saved. **cd** is for *change directory*, and the syntax is **cd Foldername**:
+
+```zsh
+cd Documents
+```
+
+#### Making a new folder fron the command Line
+
+In both systems, the **mkdir** command for *make directory* will create a new folder, and **cd** will change directories. :
+
+```zsh
+mkdir Rclass
+cd Rclass
+```
+
+Listing the contents of a directory is done with **ls** in UNIX:
+```zsh
+ls
+```
+And with **dir** in Windows:
+```
+dir
+```
+
+You have now created the Rclass directory, changed directory again into Rclass, and listed files. (It should be empty.)
+
+This seems like a lot of trouble, when you can just point and click. But the beauty of the shell is its power. We can automate actions, execute code, and use wildcards to do many at once.
+
+Letʻs say you wanted to create files in a new subfolder. **touch** is a command that creates a new (empty) file, or alters the timestamp of existing files.
+
+```zsh
+mkdir shell
+cd shell
+touch dat.txt
+```
+For Windows, you can create one file like this:
+```
+type nul > dat.txt
+```
+
+Check that you have a subfolder within Rclass that has one file named dat.txt.
+
+Suppose we wanted to create 10 files.  You can so easily in the UNIX shell:
+
+```zsh
+touch dat{1..10}.txt
+```
+
+To check your files timestamps list files with the -l flag:
+
+```zsh
+ls -l
+```
+
+The -a flag shows hidden files. You can do both at once:
+
+```zsh
+ls -la
+```
+
+::: callout-note
+# Exercise:
+
+1. Create 20 files with the .jpg file extension.
+2. List your files now.
+3. Create 2 subdirectories, one called "Data" and one called "Images"
+:::
+
+Some additional very useful commands are those for moving, copying, and removing (deleting) files.  These can operate on your current directory, or you can add the *path* to your file. For example, to move your file into the Data subdirectory:
+
+```zsh
+mv dat1.txt Data/dat1.txt
+ls
+ls Data
+```
+Anywhere where you can indicate a filename, you can also add a path to that file.
+
+| function | UNIX | Windows CMD |  example |
+|------|-------|---------|----- |
+| move | mv filename newlocation | move filename newlocation | mv dat1.txt Data |
+| copy | cp filename newfilename | copy filename newfilename | cp dat1.txt catcat.txt |
+| remove | rm filename | del filename | rm dat1.txt |
+| list files | ls | dir | |
+| get working directory | pwd | cd | |
+
+*Note: UNIX commands are case-sensitive, Windows commands are not.*
+*Apologies in advance for any Windows command errors - Iʻm really not an expert. Please let me know so I can fix it. Thank you!*
+
+#### Wildcards
+
+You can also select multiple files at once using wildcards. If you want to grab all of the .txt files, for example, you can do:
+
+```zsh
+cp *.txt Data
+ls
+ls Data
+```
+
+And you should have copied *all* files that end in .txt into Data.  You could alternatively used dat* which will select all files that begin with "dat" but can end in anything else.  The * will match any characters (zero or more).
+
+There are a lot of other wildcards that you can use.
+
+::: callout-note
+# Exercise:
+
+1. Move all of your data files into Data, and all of your image files into Images.
+2. Remove any straggler files from the top level of shell, if you used the copy command.
+3. List files from shell, Data, and Images.
+:::
+
+# Relative paths vs. Absolute paths
+
+In the Mac, there are two important "shortcuts".
+- "/" : The root directory of your entire computer, indicated by "/".
+- "~" : The root of your user directory, which for me is "marguerite". From the root directory, it will be "/Users/username"
+
+Check out what is in these directories:
+```zsh
+ls /
+ls ~
+```
+A relative path will traverse the file directory *relative* to where you are currently.
+
+In contrast, an absolute path will start from the very beginning of your root directory.
+
+You can use these as starting points or shorthand. For example, "cd ~/Documents" will take you to the Documents folder inside your user directory, regardless of where you are currently because it is an **absolute path**.
+
+## Navigating your filedirectories
+
+- "." is the current working directory (where you are currently)
+- ".." is the directory one level up
+- "./foldername" will take you to the folder one level down, for example "./Data"
+
+You can use these paths to move directories using *cd*  or to list the contents of the directories using *ls* or to make new directories using *mkdir* 
+
+```zsh
+ls .
+ls ./Data
+mkdir ./Data/A
+```
+Make multiple directories:
+
+```zsh
+mkdir ./Data/B ./Data/C
+```
+
+# Executing software from the command Line
+
+coming soon
+
+# Piping commands
+
+You can redirect output using *>*  and *<* with the point indicating the direction.  Here is an example. First letʻs put some contents into the files, and check the contents with the command "less" (there is also "more"):
+
+```zsh
+echo "A" > dat1.txt
+less dat1.txt
+```
+
+*>* pipes (or sends) output to the file named "dat1.txt".  If the file doesnʻt exist, it will create it. If it already exists, it will *replace* the file.
+
+If you want to add on to the file, use ">>"
+
+```zsh
+echo "Another letter B" > dat1.txt
+less dat1.txt
+```
+Output to multiple files:
+
+```zsh
+echo "c" >dat2.txt >dat3.txt
+less dat2.txt
+less dat3.txt
+```
+
+Concatenate (combine) multiple files using *cat* and send it to file
+
+```zsh
+cat dat1.txt dat2.txt dat3.txt
+cat dat1.txt dat2.txt dat3.txt >all.txt
+less all.txt
+```
+
+# Post-lecture materials
+
+### Final Questions
+
+Here are some post-lecture questions to help you think about the material discussed.
+
+::: callout-note
+### Questions
+
+1.  What is a command line interface?
+
+2.  How can using the command line help with file organization or reorganization?
+
+3.  What is the importance of choosing a good file naming system?
+
+3.  What is the difference between a relative path and an absolute path?
+:::
+
+### Additional Resources
+
+::: callout-tip
+- [A tutorial for zsh on Macs](https://academind.com/tutorials/terminal-zsh-basics)
+- [Bash shell cheat sheet (mostly works for zsh too)](https://www.educative.io/blog/bash-shell-command-cheat-sheet)
+- [A tutorial for CMD on PCs](https://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/)
+- [Windows CMD cheat sheet](https://serverspace.us/support/help/windows-cmd-commands-cheat-sheet/)
+:::
+
+## rtistry
+
+```{r}
+#| label: flametree
+#| echo: false
+#| fig-cap-location: "top"
+knitr::include_graphics("https://github.com/djnavarro/art/raw/master/static/gallery/flametree/extra/001_flametree_20_13.jpg")
+```
+
+\['Flametree' from Danielle Navarro <https://art.djnavarro.net>\]
