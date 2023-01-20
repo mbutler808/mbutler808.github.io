@@ -49,11 +49,25 @@
     "text": "Read ahead\n\n\n\nFor future lectures, Iʻll give you some reading or podcasts to prepare\n\n\n\n\n\nMaterial for this lecture was borrowed and adopted from\n\nhttps://academind.com/tutorials/terminal-zsh-basics"
   },
   {
-    "objectID": "posts/2023-01-19-your-computer-filesystems/index.html#navigating-your-filedirectories",
-    "href": "posts/2023-01-19-your-computer-filesystems/index.html#navigating-your-filedirectories",
+    "objectID": "posts/2023-01-19-your-computer-filesystems/index.html#the-kernel",
+    "href": "posts/2023-01-19-your-computer-filesystems/index.html#the-kernel",
     "title": "Introduction to your computerʻs terminal utilities",
-    "section": "Navigating your filedirectories",
-    "text": "Navigating your filedirectories\n\n“.” is the current working directory (where you are currently)\n“..” is the directory one level up\n“./foldername” will take you to the folder one level down, for example “./Data”\n\nYou can use these paths to move directories using cd or to list the contents of the directories using ls or to make new directories using mkdir\nls .\nls ./Data\nmkdir ./Data/A\nMake multiple directories:\nmkdir ./Data/B ./Data/C"
+    "section": "The kernel",
+    "text": "The kernel\nThe kernel is the part of your computerʻs operating system that loads first once you start up. It is kind of like your computerʻs autonomic nervous system. It recognizes all of the physical hardware attached to it, enables communication between components (and device drivers), and monitors maintenance functions like turning on the fan when it gets hot, manages virtual memory, gives warnings when the hard drive gets full, manages multitasking, and manages security and file permissions. In the mac this is the XNU kernel, in modern Windows machines it is the Windows NT kernel.\n\n\n\n\n\n[Source: Map of MacOS: the heart of everything is called Darwin; and within it, we have separate system utilities (the shell) and the XNU kernel, which is composed in parts by the Mach kernel and by the BSD kernel.]"
+  },
+  {
+    "objectID": "posts/2023-01-19-your-computer-filesystems/index.html#the-shell",
+    "href": "posts/2023-01-19-your-computer-filesystems/index.html#the-shell",
+    "title": "Introduction to your computerʻs terminal utilities",
+    "section": "The shell",
+    "text": "The shell\nThe shell is another key part of the core operating system (note in the diagram above it is part of the System Utilities, and the partner of the kernel). The shell is a software (an app) that allows humans to control the computer. You are already familiar with the GUI interface, or the Graphical User Interface. It is important that you are comfortable using the Command Line Interface as well.\n\n\n\n\n\n\nThere are many reasons to be proficient in the shell:\n\n\n\n\nData analysis increasingly uses many files. The shell provides a simple but very powerful means to do all kinds of operations on files: move, delete, organize, combine, rename, etc.\nUsing the shell encourages you to understand your computerʻs filesystem, and helps you to more precisely control input and output to any place along your file paths.\nShell operations are fast.\nYou can use wildcards to control matching or excluding many files.\nThe shell can be used to execute (run) software.\nThe shell is probably the oldest app, so it is very stable with lasting power.\nIt is part of the OS, so when your apps fail or you are having some issues, you would turn to the shell to kill troublesome processes (programs) or diagnose and fix the issues.\n\n\n\nMacs use the same terminal utilities as UNIX/Linux systems. On the Mac, the command line interface app is called Terminal, which you will find in your Application folder, in the Utilities subfolder (here is a screentshot of our GUI Interface).\n\n\n\n\n\nOn a PC you would use the Command Prompt otherwise known as the Windows Command Processor or CMD. If you used a pre-Windows machine, you would be familiar with MS-DOS. To open CMD:\n\nOpen the Start Menu and type “command prompt” or\nPress Win + R and type “cmd” in the run box or\nPress Win + X and select Command Prompt from the menu.\n\nNote: you may see Windows PowerShell or Windows Terminal instead, these are similar apps."
+  },
+  {
+    "objectID": "posts/2023-01-19-your-computer-filesystems/index.html#the-dots",
+    "href": "posts/2023-01-19-your-computer-filesystems/index.html#the-dots",
+    "title": "Introduction to your computerʻs terminal utilities",
+    "section": "The dots",
+    "text": "The dots\n\n“.” is the current working directory (where you are currently)\n“..” is the directory one level up\n“./foldername” will take you to the folder one level down, for example “./Data”\n\nYou can use these paths to move directories using cd or to list the contents of the directories using ls or to make new directories using mkdir\nls .\nls ./Data\nmkdir ./Data/A\nMake multiple directories:\nmkdir ./Data/B ./Data/C\nList the files one level up or two levels up:\nls ..  # for PC use dir ..\nls ../.."
   },
   {
     "objectID": "posts/2023-01-19-your-computer-filesystems/index.html#rtistry",
