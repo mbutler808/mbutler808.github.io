@@ -101,7 +101,7 @@ ls
 
 ## PC
 
-```zsh
+```default
 dir
 ```
 
@@ -130,7 +130,7 @@ ls
 
 And with **dir** in Windows:
 
-```zsh
+```default
 dir
 ```
 
@@ -146,7 +146,7 @@ cd shell
 touch dat.txt
 ```
 For Windows, you can create one file like this:
-```zsh
+```default
 type nul > dat.txt
 ```
 
