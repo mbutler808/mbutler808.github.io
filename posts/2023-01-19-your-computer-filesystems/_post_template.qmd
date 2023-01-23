@@ -1,6 +1,6 @@
 ---
 title: "Add title"
-author: 
+author:
   - name: Stephanie Hicks
     url: https://stephaniehicks.com
     affiliation: Department of Biostatistics, Johns Hopkins
@@ -42,6 +42,20 @@ Material for this lecture was borrowed and adopted from
 :::
 
 # Add lecture here
+
+
+::: {.panel-tabset}
+
+## Mac/UNIX
+
+```zsh
+```
+
+## PC
+
+```zsh
+```
+:::
 
 # Post-lecture materials
 
