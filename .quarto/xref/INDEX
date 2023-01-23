@@ -26,5 +26,17 @@
   },
   "schedule.qmd": {
     "schedule.html": "6846c609"
+  },
+  "projects/2022-09-06-project-1/index.qmd": {
+    "index.html": "d9d78ac6"
+  },
+  "projects/2023-01-24-project-0/index.qmd": {
+    "index.html": "d5998b5f"
+  },
+  "projects/2022-10-04-project-3/index.qmd": {
+    "index.html": "8caaab9c"
+  },
+  "projects/2022-09-15-project-2/index.qmd": {
+    "index.html": "d791522b"
   }
 }

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>rclass - mbutler808.github.io</title>
+<title>rclass - Welcome to Introduction to Data Science in R for Biologists!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -63,7 +62,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -142,35 +141,50 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-about-jolla">
+  <img src="images/coolPCA.png" class="about-image
+  round " style="height: 15em; width: 15em;">
+ <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">mbutler808.github.io</h1>
+<h1 class="title">Welcome to Introduction to Data Science in R for Biologists!</h1>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    
-  
-    
   </div>
-  
+</header><main class="content" id="quarto-document-content">
+<p>Welcome to Data Science for Biologists at the University of Hawai`i!</p>
+<section id="what-is-this-course" class="level2">
+<h2 data-anchor-id="what-is-this-course">What is this course?</h2>
+<p>This course covers the basics of computational and programming skills required for research in biological sciences and related disciplines. We will cover practical issues in data organization and management as well as programming in R and the tidyverse. Some of the topics will include: data ethics, best practices for coding and reproducible research, introduction to data visualizations, best practices for working with special data types (dates/times, text data, etc), best practices for storing data, basics of debugging, organizing and commenting code, basics of interacting with other computational resources from R. Topics in statistical data analysis, morphometrics, phylogenetic tree visualization, and other practical examples provide working examples.</p>
+</section>
+<section id="getting-started" class="level2">
+<h2 data-anchor-id="getting-started">Getting started</h2>
+<p>Please look over the <a href="./syllabus.html">Syllabus</a> and <a href="./schedule.html">Schedule</a> under <strong>General Information</strong>. Lectures are provided under the course materials tab.</p>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>This course was developed and is maintained by <a href="https://butlerlab.org">Marguerite Butler</a>.</p>
+<p>A big thank you to <a href="https://www.stephaniehicks.com">Stephanie Hicks</a> for generously sharing the beautifully designed quarto template for this course.</p>
+<p>Materials have been adapted from courses developed by the following individuals (more to come): <a href="https://www.stephaniehicks.com">Stephanie Hicks</a>.</p>
+<p>The course materials are licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>. Linked and embedded materials are governed by their own licenses. I assume that all external materials used or embedded here are covered under the educational fair use policy. If this is not the case and any material displayed here violates copyright, please let me know and I will remove it.</p>
 
-</header>
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-
-
-
-</main> <!-- /main -->
+</section>
+</main> 
+  <hr class="about-sep">
+   <div class="about-links">
+  <a href="https://twitter.com/mbutler808" class="about-link">
+    <i class="bi bi-twitter"></i>
+     <span class="about-link-text">Twitter</span>
+  </a>
+  <a href="https://github.com/mbutler808" class="about-link">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">Github</span>
+  </a>
+</div>
+</div>
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -191,13 +205,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const clipboard = new window.ClipboardJS('.code-copy-button', {
     target: function(trigger) {
       return trigger.previousElementSibling;

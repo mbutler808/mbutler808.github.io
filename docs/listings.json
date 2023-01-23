@@ -1,7 +1,9 @@
 [
   {
     "listing": "/projects.html",
-    "items": []
+    "items": [
+      "/projects/2023-01-24-project-0/index.html"
+    ]
   },
   {
     "listing": "/lectures.html",

@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -176,7 +176,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="project 0">project 0 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="projects">projects <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -203,7 +203,41 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-projects">
 <div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="project 0,projects" data-listing-date-sort="1661853600000" data-listing-file-modified-sort="1674512391099" data-listing-reading-time-sort="5.115">
+<div class="body">
+<a href="./projects/2023-01-24-project-0/index.html">
+<h3 class="no-anchor listing-title">
+Project 0 (optional)
+</h3>
+<div class="listing-subtitle">
 
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('project 0'); return false;">
+project 0
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('projects'); return false;">
+projects
+</div>
+</div>
+<a href="./projects/2023-01-24-project-0/index.html">
+<div class="listing-description">
+<p>Information for Project 0 (entirely optional, but hopefully useful and fun!)</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./projects/2023-01-24-project-0/index.html">
+<div class="listing-date">
+Aug 30, 2022
+</div>
+<div class="listing-author">
+Marguerite Butler
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
