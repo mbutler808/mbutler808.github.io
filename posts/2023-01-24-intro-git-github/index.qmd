@@ -142,6 +142,7 @@ Cloning an existing repo from GitHub is easy. Letʻs clone the **rclassdata** re
 #| out-width: '100%'
 knitr::include_graphics("../../images/github_cloning.png")
 ```
+
 2. In your Terminal or CMD prompt, navigate to your git folder (create one in Documents if you donʻt have one already), and clone the repo:
 ```{.bash filename=Terminal}
 pwd  # or dir on PC
@@ -163,6 +164,7 @@ Suppose you have some files on your computer and youʻd like to make them into a
 #| out-width: '50%'
 knitr::include_graphics("../../images/git_newrepo.png")
 ```
+
 3. Give your new repo a name ("test") and choose to create a blank repo with no README.md or .gitignore. We can add them later.
 ```{r}
 #| label: github_create_new_repo.png
@@ -171,6 +173,7 @@ knitr::include_graphics("../../images/git_newrepo.png")
 #| out-width: '100%'
 knitr::include_graphics("../../images/git_create_new_repo.png")
 ```
+
 4. You will see the following giving you helpful hints for linking your GitHub repo with your local repo.
 ```{r}
 #| label: github_quicksetup.png
@@ -179,6 +182,7 @@ knitr::include_graphics("../../images/git_create_new_repo.png")
 #| out-width: '100%'
 knitr::include_graphics("../../images/github_quicksetup.png")
 ```
+
 5. We will follow the first set of instructions, slightly modified. By line of code below:
 
     a. First we will create our README.md file,
