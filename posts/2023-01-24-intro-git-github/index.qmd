@@ -51,6 +51,15 @@ This document gives a brief explanation of GitHub and how we will use it for thi
 
 **Git** is software that implements what is called a *version control system* for a repository of files (also known as a *repo*). The main idea is that as you (and your collaborators) work on a project, the git software tracks, and records any changes made by anyone.
 
+```{r}
+#| label: A-Solo-work-with-DIY-version-control-via-filename-B-Collaborative-work-with-DIY_W640.jpeg
+#| echo: false
+#| fig-cap: 'Everyone is one with the repo'
+#| out-width: '80%'
+knitr::include_graphics("../../images/A-Solo-work-with-DIY-version-control-via-filename-B-Collaborative-work-with-DIY_W640.jpeg")
+```
+\[[Source: Jenny Bryan](https://peerj.com/preprints/3159/)
+
 **GitHub** is an online server and user interface that also provides powerful tools for distribution of your repository, bug tracking, collaboration, and also allows you to create easy websites for each repository.
 
 *Git* and *GitHub* together provide an organized way to track your projects, and all of the tools you will need in this course are free.
