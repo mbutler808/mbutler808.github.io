@@ -98,7 +98,7 @@ Learning objectives
 <h3 class="anchored" data-anchor-id="what-to-not-use-gitgithub-for">What to (not) use Git/GitHub for</h3>
 <p><strong>GitHub is ideal if</strong> you have a project with (possibly many) smallish files, and most of those files are text files (such as R code, LaTeX, Quarto/(R)Markdown, etc.) and different people work on different parts of the project.</p>
 <p><strong>GitHub is less useful if</strong> you have a lot of non-text files (e.g.&nbsp;Word or PowerPoint) and different team members might want to edit the same document at the same time. In that instance, a solution like Google Docs, Word+Dropbox, Word+Onedrive, etc. might be better.</p>
-<p><strong>GitHub also has a problem with <em>large files</em></strong>. Anything above around 50MB can lead to very slow syncing and sometimes outright failure. Unfortunately, once GitHub has chocked on a large file, it can be quite tricky to fix the repository to work again. Therefore keep large (&gt;50MB) files out of your GitHub repositories. If you have to work with such files, try to reduce them first before placing into the GitHub repository. Or as alternative, place those files in another sync service (e.g.&nbsp;Dropbox, OneDrive, GoogleDrive) and load them from there.</p>
+<p><strong>GitHub also has a problem with <em>large files</em></strong>. Anything above around 50MB can lead to very slow syncing and sometimes outright failure. Unfortunately, once GitHub has choked on a large file, it can be quite tricky to fix the repository to work again. <em>This is because the ENTIRE history is saved, including the addition of the huge file.</em> Therefore keep large (&gt;50MB) files out of your GitHub repositories. If you have to work with such files, try to reduce them first before placing into the GitHub repository. Or as alternative, place those files in another sync service (e.g.&nbsp;Dropbox, OneDrive, GoogleDrive) and load them from there.</p>
 <p><strong>Finally, if you have <em>data</em></strong>, you need to be careful since by default, GitHub repositories (the GitHub name for your projects) are public and everyone can see them. You can set the repository to private, but you need to be careful that you don’t accidentally expose confidential data to the public. It is in general not a good idea to have confidential data on GitHub. First anonymize your data enough that it is not at risk of identifiability, then you can place it in a private repository. If you put it public, be very careful that you only make things public that are ok to be made public.</p>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -329,15 +329,6 @@ Tip
 </ul>
 </div>
 </div>
-</section>
-<section id="rtistry" class="level2">
-<h2 class="anchored" data-anchor-id="rtistry">rtistry</h2>
-<div class="cell fig-cap-location-top">
-<div class="cell-output-display">
-<p><img src="https://mbutler808.github.io/posts/2023-01-24-intro-git-github/https:/github.com/djnavarro/art/raw/master/static/gallery/flametree/extra/001_flametree_20_13.jpg" class="img-fluid"></p>
-</div>
-</div>
-<p>[‘Flametree’ from Danielle Navarro <a href="https://art.djnavarro.net" class="uri">https://art.djnavarro.net</a>]</p>
 
 
 </section>
@@ -846,7 +837,7 @@ Tip
   <link>https://mbutler808.github.io/posts/2023-01-17-the-big-picture/index.html</link>
   <description><![CDATA[ undefined ]]></description>
   <guid>https://mbutler808.github.io/posts/2023-01-17-the-big-picture/index.html</guid>
-  <pubDate>Tue, 24 Jan 2023 13:42:32 GMT</pubDate>
+  <pubDate>Tue, 24 Jan 2023 13:44:58 GMT</pubDate>
   <media:content url="https://mbutler808.github.io/posts/2023-01-17-the-big-picture/whole-game.png" medium="image" type="image/png" height="49" width="144"/>
 </item>
 </channel>
