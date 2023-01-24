@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Marguerite Butler">
-<meta name="dcterms.date" content="2023-01-18">
+<meta name="dcterms.date" content="2023-01-19">
 <meta name="description" content="So much power; or how I got my computer to do my bidding">
 
 <title>rclass - Introduction to your computerʻs terminal utilities</title>
@@ -244,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 18, 2023</p>
+        <p class="date">January 19, 2023</p>
       </div>
     </div>
     
@@ -389,7 +389,7 @@ There are many reasons to be proficient in the shell:
 <p>Macs use the same terminal utilities as UNIX/Linux systems. On the Mac, the command line interface app is called <em>Terminal</em>, which you will find in your <em>Application</em> folder, in the <em>Utilities</em> subfolder (here is a screentshot of our GUI Interface).</p>
 <div class="cell fig-cap-location-top">
 <div class="cell-output-display">
-<p><img src="terminal.png" class="img-fluid" width="986"></p>
+<p><img src="terminal.png" class="img-fluid"></p>
 </div>
 </div>
 <p>On a PC you would use the <em>Command Prompt</em> otherwise known as the <em>Windows Command Processor</em> or <em>CMD</em>. If you used a pre-Windows machine, you would be familiar with MS-DOS. To open CMD:</p>
@@ -669,6 +669,9 @@ Note:
 <p>List the files one level up or two levels up:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ..  <span class="co"># for PC use dir ..</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ../..</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Up one level, and over to another directory:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ../AnotherDirectory</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can wander anywhere along your computerʻs file directory! Just add more steps to the path.</p>
 </section>
 </section>
 <section id="executing-software-from-the-command-line" class="level1">
@@ -678,20 +681,20 @@ Note:
 <section id="piping-commands" class="level1">
 <h1>Piping commands</h1>
 <p>You can redirect output using <em>&gt;</em> and <em>&lt;</em> with the point indicating the direction. Here is an example. First letʻs put some contents into the files, and check the contents with the command “less” (there is also “more”):</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"A"</span> <span class="op">&gt;</span> dat1.txt</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> dat1.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"A"</span> <span class="op">&gt;</span> dat1.txt</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> dat1.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><em>&gt;</em> pipes (or sends) output to the file named “dat1.txt”. If the file doesnʻt exist, it will create it. If it already exists, it will <em>replace</em> the file.</p>
 <p>If you want to add on to the file, use “&gt;&gt;”</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Another letter B"</span> <span class="op">&gt;&gt;</span> dat1.txt</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> dat1.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Another letter B"</span> <span class="op">&gt;&gt;</span> dat1.txt</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> dat1.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Output to multiple files:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"c"</span> <span class="op">&gt;</span>dat2.txt <span class="op">&gt;</span>dat3.txt</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> dat2.txt</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> dat3.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"c"</span> <span class="op">&gt;</span>dat2.txt <span class="op">&gt;</span>dat3.txt</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> dat2.txt</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> dat3.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Concatenate (combine) multiple files using <em>cat</em> and send it to file</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> dat1.txt dat2.txt dat3.txt</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> dat1.txt dat2.txt dat3.txt <span class="op">&gt;</span>all.txt</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> all.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode zsh code-with-copy"><code class="sourceCode zsh"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> dat1.txt dat2.txt dat3.txt</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> dat1.txt dat2.txt dat3.txt <span class="op">&gt;</span>all.txt</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> all.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>

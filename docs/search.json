@@ -2,42 +2,42 @@
   {
     "objectID": "posts/2023-01-17-the-big-picture/index.html#data-science",
     "href": "posts/2023-01-17-the-big-picture/index.html#data-science",
-    "title": "First Class",
+    "title": "Introduction and The Big Idea",
     "section": "Data Science",
     "text": "Data Science\nFrom R for Data Science 2e by Hadley Wickam, Garrett Grolemund, and Mine Çetinkaya-Rundel\n\n\n\nQuestion -> Gather Data -> Design\nObserve -> Record Data -> Data Table\nDocument -> Comment (annotate)\nProject -> Version Control -> Share"
   },
   {
     "objectID": "posts/2023-01-17-the-big-picture/index.html#learning-r---a-first-session",
     "href": "posts/2023-01-17-the-big-picture/index.html#learning-r---a-first-session",
-    "title": "First Class",
+    "title": "Introduction and The Big Idea",
     "section": "Learning R - A first session",
     "text": "Learning R - A first session\n\n\nThink about how R works as you try out commands\nhttps://www.r-project.org Go to manuals, click on An Introduction to R\nFollow Section 2.1\ninput -> R -> output\nWhat came out? What does it tell you about the rules R follows?\nComputers only do Exactly what you tell them to do\nJump to Appendix A - letʻs try to understand some rules of R together"
   },
   {
     "objectID": "posts/2023-01-17-the-big-picture/index.html#goals",
     "href": "posts/2023-01-17-the-big-picture/index.html#goals",
-    "title": "First Class",
+    "title": "Introduction and The Big Idea",
     "section": "Goals",
     "text": "Goals\n\nCreativity\nAccuracy\nAuthority\nRepeatability\nCommunication\n\nEase of dissemination to other researchers\nShow me, donʻt tell me"
   },
   {
     "objectID": "posts/2023-01-17-the-big-picture/index.html#tools",
     "href": "posts/2023-01-17-the-big-picture/index.html#tools",
-    "title": "First Class",
+    "title": "Introduction and The Big Idea",
     "section": "Tools",
     "text": "Tools\n\n\nOur senses\nNotebooks and Pens\nExcel\nCommand Line (UNIX/ Windows/ File Commands in your operating system)\nR\nGit/GitHub\nQuarto/Rmarkdown\nand many more…"
   },
   {
     "objectID": "posts/2023-01-17-the-big-picture/index.html#data-science-1",
     "href": "posts/2023-01-17-the-big-picture/index.html#data-science-1",
-    "title": "First Class",
+    "title": "Introduction and The Big Idea",
     "section": "Data Science",
     "text": "Data Science\n\n\n\n\n\nNeed\nTools\n\n\n\n\nObserve -> Record Data -> Data Table\nNotebooks\n\n\nDocument -> Comment (annotate)\nR\n\n\nProject -> Version Control -> Share\nGit/GitHub\n\n\nCommunicate\nR/ Quarto"
   },
   {
     "objectID": "posts/2023-01-17-the-big-picture/index.html#software",
     "href": "posts/2023-01-17-the-big-picture/index.html#software",
-    "title": "First Class",
+    "title": "Introduction and The Big Idea",
     "section": "Software",
     "text": "Software\n\nDo you have R installed and working? (R studio is optional)\nFor a longer walk-through here is another resource: Introduction to R/Rstudio\nGit/GitHub: Please Install. Letʻs follow Introduction to Git/GitHub"
   },
@@ -67,7 +67,7 @@
     "href": "posts/2023-01-19-your-computer-filesystems/index.html#the-dots",
     "title": "Introduction to your computerʻs terminal utilities",
     "section": "The dots",
-    "text": "The dots\n\n“.” is the current working directory (where you are currently)\n“..” is the directory one level up\n“./foldername” will take you to the folder one level down, for example “./Data”\n\nYou can use these paths to move directories using cd or to list the contents of the directories using ls or to make new directories using mkdir\nls .\nls ./Data\nmkdir ./Data/A\nMake multiple directories:\nmkdir ./Data/B ./Data/C\nList the files one level up or two levels up:\nls ..  # for PC use dir ..\nls ../.."
+    "text": "The dots\n\n“.” is the current working directory (where you are currently)\n“..” is the directory one level up\n“./foldername” will take you to the folder one level down, for example “./Data”\n\nYou can use these paths to move directories using cd or to list the contents of the directories using ls or to make new directories using mkdir\nls .\nls ./Data\nmkdir ./Data/A\nMake multiple directories:\nmkdir ./Data/B ./Data/C\nList the files one level up or two levels up:\nls ..  # for PC use dir ..\nls ../..\nUp one level, and over to another directory:\nls ../AnotherDirectory\nYou can wander anywhere along your computerʻs file directory! Just add more steps to the path."
   },
   {
     "objectID": "posts/2023-01-19-your-computer-filesystems/index.html#rtistry",
@@ -137,7 +137,7 @@
     "href": "lectures.html",
     "title": "Lectures",
     "section": "",
-    "text": "First Class\n\n\n\n\n\n\n\n\n\n\n\n\nMarguerite Butler\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to git/GitHub\n\n\n\n\n\n\n\nmodule 1\n\n\nweek 2\n\n\nprogramming\n\n\nversion control\n\n\ngit\n\n\nGitHub\n\n\n\n\nVersion control is a game changer; or how I learned to love git/GitHub\n\n\n\n\n\n\nJan 24, 2023\n\n\nMarguerite Butler\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to your computerʻs terminal utilities\n\n\n\n\n\n\n\nmodule 1\n\n\nweek 1\n\n\nprogramming\n\n\nfilesystem\n\n\nshell\n\n\n\n\nSo much power; or how I got my computer to do my bidding\n\n\n\n\n\n\nJan 18, 2023\n\n\nMarguerite Butler\n\n\n\n\n\n\nNo matching items"
+    "text": "Introduction to git/GitHub\n\n\n\n\n\n\n\nmodule 1\n\n\nweek 2\n\n\nprogramming\n\n\nversion control\n\n\ngit\n\n\nGitHub\n\n\n\n\nVersion control is a game changer; or how I learned to love git/GitHub\n\n\n\n\n\n\nJan 24, 2023\n\n\nMarguerite Butler\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to your computerʻs terminal utilities\n\n\n\n\n\n\n\nmodule 1\n\n\nweek 1\n\n\nprogramming\n\n\nfilesystem\n\n\nshell\n\n\n\n\nSo much power; or how I got my computer to do my bidding\n\n\n\n\n\n\nJan 19, 2023\n\n\nMarguerite Butler\n\n\n\n\n\n\n  \n\n\n\n\nIntroduction and The Big Idea\n\n\n\n\n\n\n\nmodule 1\n\n\nweek 1\n\n\nintroduction\n\n\n\n\nThe big idea\n\n\n\n\n\n\nJan 17, 2023\n\n\nMarguerite Butler\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "syllabus.html",
@@ -263,6 +263,6 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "For Qmd files (markdown document with Quarto which are cross-language executable code), go to the course GitHub repository and navigate the directories, or best of all clone the repo and navigate within RStudio or your text browser and R console.\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopics\nProjects\n\n\n\n\n\nModule 1\n\nComputational Tools for Data Science\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\nJan 17\n👋 Installing R/RStudio, GitHub [html] [Qmd]\n\n\n\n\n\nJan 19\n👩‍💻 Shell scripts, File Organization [html] [Qmd]\n\n\n\n\n\n\n\n\n\n\n\nModule 2\n\nData Analysis in R \n\n\n\n\n\n\n\n\n\n\n\nWeek 2\nJan 24\n🐙 What is the Question? / Reproducible Research and Literate Programming\n🌴 Project 0 [html] [Qmd]\n\n\n\n\nJan 26\n🔬 Data management and workflow\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\nJan 31\n👓 Reading/Writing data\n\n\n\n\n\nFeb 2\n🔪 Tidying Data\n🍂 Project 0 due\n\n\n\n\n\n\n\n\n\n\nModule 3\n\nData Visulization in R\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\nFeb 7\n📊 Plotting Systems (Base R)\n\n\n\n\n\nFeb 9\n📊 ggplot2\n\n\n\n\n\n\n\n\n\n\n\nModule 4\n\nNuts and Bolts of R\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\nFeb 14\n🔩 R Nuts and Bolts (Objects)\n\n\n\n\n\nFeb 16\n🤝 Reshaping objects\n🍂 Project 1 due\n\n\n\n\n\n\n\n\n\n\nWeek 6\nFeb 21\n📝 Control Structures\n\n\n\n\n\nFeb 23\n📋 Functions\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\nFeb 28\n🐒 Loop Functions\n\n\n\n\n\n\n\n\n\n\n\n\nMar 2\n🐛 Debugging and Error Handling\n\n\n\n\n\n\n\n\n\n\n\nModule 5\n\nSpecial Data Types\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\nMar 7\n📆 Dates and Times\n\n\n\n\n\nMar 9\n🐎 Regular Expressions\n🍂 Project 2 due\n\n\n\n\n\n\n\n\n\n\nWeek 9\nMar 14\n☀️ Spring Break\n\n\n\n\n\nMar 16\n☀️ Spring Break\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\nMar 21\n🍄 Factors\n\n\n\n\n\n\n\n\n\n\n\n\nMar 23\n🌵 Text Data and Strings\n\n\n\n\n\n\n\n\n\n\n\nModule 6\n\nIntro to Morphometrics\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\nMar 28\n📏 Linear Morphometrics, Size, Shape\n\n\n\n\n\n\n\n\n\n\n\n\nMar 30\n📐 Landmark-based Morphometrics\n\n\n\n\n\n\n\n\n\n\n\nWeek 12\nApr 4\n💀 3D Morphometrics\n\n\n\n\n\nApr 6\n🐾 3D Morphometrics\n\n\n\n\n\n\n\n\n\n\n\nModule 7\n\nPhylogenetic Trees\n\n\n\n\n\n\n\n\n\n\n\nWeek 13\nApr 11\n🌱 Trees as Data Objects\n🍂 Project 3 due\n\n\n\n\nApr 13\n🌴 Reading and writing trees, ape, ggtree, treeio\n\n\n\n\n\n\n\n\n\n\n\nWeek 14\nApr 18\n🌳 Reshaping Trees\n\n\n\n\n\n\n\n\n\n\n\n\nApr 20\n🌺 Annotating Tree Plots\n\n\n\n\n\n\n\n\n\n\n\nModule 8\n\nOther Topics\n\n\n\n\n\n\n\n\n\n\n\nWeek 15\nApr 25\n🐍 Parsing Data from any Format\n\n\n\n\n\n\n\n\n\n\n\n\nApr 27\n🌰 Student choice topic\n\n\n\n\n\n\n\n\n\n\n\nWeek 16\nMay 2\n🏆 Final Presentations\n🎊 Project 4 due"
+    "text": "For Qmd files (markdown document with Quarto which are cross-language executable code), go to the course GitHub repository and navigate the directories, or best of all clone the repo and navigate within RStudio or your text browser and R console.\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopics\nProjects\n\n\n\n\n\nModule 1\n\nComputational Tools for Data Science\n\n\n\n\n\n\n\n\n\n\n\nWeek 1\nJan 17\n👋 Installing R/RStudio, GitHub [html] [Qmd]\n\n\n\n\n\nJan 19\n👩‍💻 Shell scripts, File Organization [html] [Qmd]\n\n\n\n\n\n\n\n\n\n\n\nModule 2\n\nData Analysis in R \n\n\n\n\n\n\n\n\n\n\n\nWeek 2\nJan 24\n🐙 Intro to Git and GitHub [html] [Qmd]\n🌴 Project 0 [html] [Qmd]\n\n\n\n\nJan 24\n🐙 Intro to Quarto/ Reproducible Research and Literate Programming\n\n\n\n\n\nJan 26\n🔬 What is the Question? Data management and workflow\n\n\n\n\n\n\n\n\n\n\n\nWeek 3\nJan 31\n👓 Reading/Writing data\n\n\n\n\n\nFeb 2\n🔪 Tidying Data\n🍂 Project 0 due\n\n\n\n\n\n\n\n\n\n\nModule 3\n\nData Visulization in R\n\n\n\n\n\n\n\n\n\n\n\nWeek 4\nFeb 7\n📊 Plotting Systems (Base R)\n\n\n\n\n\nFeb 9\n📊 ggplot2\n\n\n\n\n\n\n\n\n\n\n\nModule 4\n\nNuts and Bolts of R\n\n\n\n\n\n\n\n\n\n\n\nWeek 5\nFeb 14\n🔩 R Nuts and Bolts (Objects)\n\n\n\n\n\nFeb 16\n🤝 Reshaping objects\n🍂 Project 1 due\n\n\n\n\n\n\n\n\n\n\nWeek 6\nFeb 21\n📝 Control Structures\n\n\n\n\n\nFeb 23\n📋 Functions\n\n\n\n\n\n\n\n\n\n\n\nWeek 7\nFeb 28\n🐒 Loop Functions\n\n\n\n\n\n\n\n\n\n\n\n\nMar 2\n🐛 Debugging and Error Handling\n\n\n\n\n\n\n\n\n\n\n\nModule 5\n\nSpecial Data Types\n\n\n\n\n\n\n\n\n\n\n\nWeek 8\nMar 7\n📆 Dates and Times\n\n\n\n\n\nMar 9\n🐎 Regular Expressions\n🍂 Project 2 due\n\n\n\n\n\n\n\n\n\n\nWeek 9\nMar 14\n☀️ Spring Break\n\n\n\n\n\nMar 16\n☀️ Spring Break\n\n\n\n\n\n\n\n\n\n\n\nWeek 10\nMar 21\n🍄 Factors\n\n\n\n\n\n\n\n\n\n\n\n\nMar 23\n🌵 Text Data and Strings\n\n\n\n\n\n\n\n\n\n\n\nModule 6\n\nIntro to Morphometrics\n\n\n\n\n\n\n\n\n\n\n\nWeek 11\nMar 28\n📏 Linear Morphometrics, Size, Shape\n\n\n\n\n\n\n\n\n\n\n\n\nMar 30\n📐 Landmark-based Morphometrics\n\n\n\n\n\n\n\n\n\n\n\nWeek 12\nApr 4\n💀 3D Morphometrics\n\n\n\n\n\nApr 6\n🐾 3D Morphometrics\n\n\n\n\n\n\n\n\n\n\n\nModule 7\n\nPhylogenetic Trees\n\n\n\n\n\n\n\n\n\n\n\nWeek 13\nApr 11\n🌱 Trees as Data Objects\n🍂 Project 3 due\n\n\n\n\nApr 13\n🌴 Reading and writing trees, ape, ggtree, treeio\n\n\n\n\n\n\n\n\n\n\n\nWeek 14\nApr 18\n🌳 Reshaping Trees\n\n\n\n\n\n\n\n\n\n\n\n\nApr 20\n🌺 Annotating Tree Plots\n\n\n\n\n\n\n\n\n\n\n\nModule 8\n\nOther Topics\n\n\n\n\n\n\n\n\n\n\n\nWeek 15\nApr 25\n🐍 Parsing Data from any Format\n\n\n\n\n\n\n\n\n\n\n\n\nApr 27\n🌰 Student choice topic\n\n\n\n\n\n\n\n\n\n\n\nWeek 16\nMay 2\n🏆 Final Presentations\n🎊 Project 4 due"
   }
 ]

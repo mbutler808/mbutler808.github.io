@@ -6,7 +6,7 @@ author:
     affiliation: School of Life Sciences, University of Hawaii
     affiliation_url: https://manoa.hawaii.edu/lifesciences/
 description: "So much power; or how I got my computer to do my bidding"
-date: 2023-01-18
+date: 2023-01-19
 # image: "../../images/happygitwithr.png"
 categories: [module 1, week 1, programming, filesystem, shell]
 ---
