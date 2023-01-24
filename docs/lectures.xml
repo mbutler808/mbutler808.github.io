@@ -289,6 +289,35 @@ Tip
 </div>
 <p>[<a href="https://peerj.com/preprints/3159/">Source: Jenny Bryan</a>]</p>
 </section>
+<section id="a-word" class="level1">
+<h1>A word</h1>
+<p>Sooner or later, you will encounter a merge conflict. That happens if the same file(s) changed both locally and on GitHub.com. That can happen if multiple people work on the same files, or if you work on multiple computers and forget to always push/pull before and after you work on a project. Donʻt get discouraged, this is solvable!</p>
+<p>Sometimes you have to do it manually. Moving the offending files out of your local repository, then doing the merge and after that adding the updates again can help. If you know that one source is the definite one, you can force a push or pull. A more advanced approach is to use branches.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><span class="fu" style="color: #4758AB;">git</span> push <span class="at" style="color: #657422;">--force</span></span></code></pre></div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The main danger is that a force push or pull will force git to write over a conflict, and can possibly destroy someone elseʻs work. If youʻre the only one on the repo, then itʻs only your changes that youʻll lose</li>
+<li>Just be aware but donʻt be afraid to practice. You can always revert back.</li>
+<li>See the help page for <a href="https://git-scm.com/docs/git-push">git push</a>. See the -f or –force flag. Itʻs terse computer help, but if you make the effort it will start to make sense.</li>
+<li>Iʻll link a more tutorial type resource later</li>
+</ul>
+</div>
+</div>
+</section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
 <section id="final-questions" class="level3">

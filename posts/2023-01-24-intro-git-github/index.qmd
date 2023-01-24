@@ -232,6 +232,8 @@ Your local files and your GitHub repository files are now synced!
 #| out-width: '80%'
 knitr::include_graphics("../../images/With-Git-all-contributors-have-a-copy-of-the-repo-with-all-files-and-the-full-history_W640.jpeg")
 ```
+\[[Source: Jenny Bryan](https://peerj.com/preprints/3159/)]
+
 
 # A word
 
@@ -250,8 +252,6 @@ git push --force
 - Iʻll link a more tutorial type resource later
 :::
 
-
-\[[Source: Jenny Bryan](https://peerj.com/preprints/3159/)]
 
 # Post-lecture materials
 

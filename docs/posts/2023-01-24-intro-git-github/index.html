@@ -276,6 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#using-gitgithub-in-our-course" id="toc-using-gitgithub-in-our-course" class="nav-link" data-scroll-target="#using-gitgithub-in-our-course">Using git/GitHub in our course</a></li>
   <li><a href="#clone-a-repo-to-your-local-directory---easy" id="toc-clone-a-repo-to-your-local-directory---easy" class="nav-link" data-scroll-target="#clone-a-repo-to-your-local-directory---easy">Clone a repo to your local directory - Easy!</a></li>
   <li><a href="#make-a-github-repo-started-from-your-local-files" id="toc-make-a-github-repo-started-from-your-local-files" class="nav-link" data-scroll-target="#make-a-github-repo-started-from-your-local-files">Make a GitHub repo started from your local files</a></li>
+  <li><a href="#a-word" id="toc-a-word" class="nav-link" data-scroll-target="#a-word">A word</a></li>
   <li><a href="#post-lecture-materials" id="toc-post-lecture-materials" class="nav-link" data-scroll-target="#post-lecture-materials">Post-lecture materials</a>
   <ul class="collapse">
   <li><a href="#final-questions" id="toc-final-questions" class="nav-link" data-scroll-target="#final-questions">Final Questions</a></li>
@@ -561,6 +562,35 @@ Tip
 </div>
 </div>
 <p>[<a href="https://peerj.com/preprints/3159/">Source: Jenny Bryan</a>]</p>
+</section>
+<section id="a-word" class="level1">
+<h1>A word</h1>
+<p>Sooner or later, you will encounter a merge conflict. That happens if the same file(s) changed both locally and on GitHub.com. That can happen if multiple people work on the same files, or if you work on multiple computers and forget to always push/pull before and after you work on a project. Donʻt get discouraged, this is solvable!</p>
+<p>Sometimes you have to do it manually. Moving the offending files out of your local repository, then doing the merge and after that adding the updates again can help. If you know that one source is the definite one, you can force a push or pull. A more advanced approach is to use branches.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--force</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>The main danger is that a force push or pull will force git to write over a conflict, and can possibly destroy someone elseʻs work. If youʻre the only one on the repo, then itʻs only your changes that youʻll lose</li>
+<li>Just be aware but donʻt be afraid to practice. You can always revert back.</li>
+<li>See the help page for <a href="https://git-scm.com/docs/git-push">git push</a>. See the -f or –force flag. Itʻs terse computer help, but if you make the effort it will start to make sense.</li>
+<li>Iʻll link a more tutorial type resource later</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="post-lecture-materials" class="level1">
 <h1>Post-lecture materials</h1>
