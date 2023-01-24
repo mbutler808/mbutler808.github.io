@@ -74,7 +74,7 @@ For example, you can find an example that I created for myself at
 
 ### 2. Build a website using R Markdown
 
-Using one of the many ways we discussed in class (e.g. a [simple R Markdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), [blogdown](https://bookdown.org/yihui/blogdown/), [distill](https://rstudio.github.io/distill/website.html), etc), create a new project in RStudio with the appropriate files. For example, you might include the following information:
+Using one of the many ways we discussed in class (e.g. a [simple R Markdown website](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html), or [quarto](https://quarto.org), or any number of other options including  [blogdown](https://bookdown.org/yihui/blogdown/), [distill](https://rstudio.github.io/distill/website.html), etc), create a new project in RStudio with the appropriate files. For example, you might include the following information:
 
 -   Write a short summary introducing yourself. Structure the webpage with headings, subheadings, etc. Talk a bit about yourself, your background, training, research interests. Let me/us know what kind of statistics, programming, data analysis experience you already have. I am also curious to know what you most hope to learn in this course.
 
@@ -98,11 +98,11 @@ Depending on how you want to deploy your website, the following may or may not b
 
 Following steps 2-4, here is my example website:
 
--   website: <https://www.stephaniehicks.com/biostat776-intro-stephanie-hicks>
+-   website: <https://mbutler808.github.io/zool710-intro-marguerite-butler/>
 
 ### 5. Share your website
 
--   Go to the Discussion Board in CoursePlus and write a short post with a link (URL) to your website (and URL to the corresponding GitHub repository) that you created.
+-   Go to Slack and write a short post with a link (URL) to your website (and URL to the corresponding GitHub repository) that you created.
 -   As you read the introductions from other folks in the class, feel free to comment/reply using Discussion board.
 
-In class on Sept 8, I will show as many websites as I can from Courseplus!
+In class on Feb 7, I will show as many websites as I can `r emojifont::emoji('grinning face with big eyes')`
