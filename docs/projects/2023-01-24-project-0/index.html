@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Marguerite Butler">
-<meta name="dcterms.date" content="2022-08-30">
+<meta name="dcterms.date" content="2023-01-23">
 <meta name="description" content="Information for Project 0 (entirely optional, but hopefully useful and fun!)">
 
 <title>rclass - Project 0 (optional)</title>
@@ -222,9 +222,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
   <ul class="collapse">
   <li><a href="#create-a-github-repo-for-your-website" id="toc-create-a-github-repo-for-your-website" class="nav-link" data-scroll-target="#create-a-github-repo-for-your-website">1. Create a GitHub repo for your website</a></li>
-  <li><a href="#build-a-website-using-r-markdown" id="toc-build-a-website-using-r-markdown" class="nav-link" data-scroll-target="#build-a-website-using-r-markdown">2. Build a website using R Markdown</a></li>
+  <li><a href="#make-a-local-folder-for-your-websites" id="toc-make-a-local-folder-for-your-websites" class="nav-link" data-scroll-target="#make-a-local-folder-for-your-websites">2. Make a local folder for your websites</a></li>
+  <li><a href="#build-a-website-inside-of-your-github-repo" id="toc-build-a-website-inside-of-your-github-repo" class="nav-link" data-scroll-target="#build-a-website-inside-of-your-github-repo">2. Build a website inside of your GitHub repo</a></li>
   <li><a href="#include-a-readme.md-file" id="toc-include-a-readme.md-file" class="nav-link" data-scroll-target="#include-a-readme.md-file">3. Include a <code>README.md</code> file</a></li>
   <li><a href="#deploy-your-website" id="toc-deploy-your-website" class="nav-link" data-scroll-target="#deploy-your-website">4. Deploy your website</a></li>
+  <li><a href="#publish-your-website-using-github-pages" id="toc-publish-your-website-using-github-pages" class="nav-link" data-scroll-target="#publish-your-website-using-github-pages">5. Publish your website using GitHub pages</a></li>
   <li><a href="#share-your-website" id="toc-share-your-website" class="nav-link" data-scroll-target="#share-your-website">5. Share your website</a></li>
   </ul></li>
   </ul>
@@ -268,7 +270,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 30, 2022</p>
+      <p class="date">January 23, 2023</p>
     </div>
   </div>
   
@@ -315,10 +317,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>To make sure git is installed on your system, use the ‘Terminal’ (e.g.&nbsp;it’s next to the R Console within RStudio) (or whatever you use), run the following and include the output in your email:</p></li>
 </ol>
 <p>For example, this is mine:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>git version 2.21.1 (Apple Git-122.3)</code></pre>
+<pre><code>git version 2.38.0</code></pre>
 </div>
 </div>
 <p>If you have any trouble with any of the steps above, try to first post on the discussion board on Slack. I will be checking it frequently, but other students may also be helpful in their replies. You can also use other resources to get help (Google, R4DS, colleagues/friends/relatives with R/Markdown experience, etc.). Still, try to do as much as possible yourself. We will use all the bits you are learning here repeatedly during this course.</p>
@@ -332,12 +339,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Create a new GitHub repository titled <code>zool710-intro-&lt;firstname&gt;-&lt;lastname&gt;</code> (where you replace <code>&lt;firstname&gt;</code> with your first name and <code>&lt;lastname&gt;</code> with your last name) in your own personal GitHub account (e.g.&nbsp;<code>https://github.com/&lt;yourgithubusername&gt;/biostat776-intro-&lt;firstname&gt;-&lt;lastname&gt;</code>).</p>
 <p>For example, you can find an example that I created for myself at</p>
 <ul>
-<li>github repo: <a href="https://github.com/stephaniehicks/biostat776-intro-stephanie-hicks" class="uri">https://github.com/stephaniehicks/biostat776-intro-stephanie-hicks</a></li>
+<li>github repo: <a href="https://github.com/mbutler808/zool710-intro-marguerite-butler" class="uri">https://github.com/mbutler808/zool710-intro-marguerite-butler</a></li>
 </ul>
 </section>
-<section id="build-a-website-using-r-markdown" class="level3">
-<h3 class="anchored" data-anchor-id="build-a-website-using-r-markdown">2. Build a website using R Markdown</h3>
-<p>Using one of the many ways we discussed in class (e.g.&nbsp;a <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">simple R Markdown website</a>, or <a href="https://quarto.org">quarto</a>, or any number of other options including <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>, <a href="https://rstudio.github.io/distill/website.html">distill</a>, etc), create a new project in RStudio with the appropriate files. For example, you might include the following information:</p>
+<section id="make-a-local-folder-for-your-websites" class="level3">
+<h3 class="anchored" data-anchor-id="make-a-local-folder-for-your-websites">2. Make a local folder for your websites</h3>
+<p>I like to create my git repos inside of <strong>marguerite/Documents/git/newrepo</strong>. Make a folder for your website (same name as step 1) on your local computer in your git folder. The new folder for your website will go here.</p>
+</section>
+<section id="build-a-website-inside-of-your-github-repo" class="level3">
+<h3 class="anchored" data-anchor-id="build-a-website-inside-of-your-github-repo">2. Build a website inside of your GitHub repo</h3>
+<p>Using one of the many ways we discussed in class (e.g.&nbsp;<a href="hhttps://quarto.org/docs/websites/">quarto</a>, or a <a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">simple R Markdown website</a>, or any number of other options including <a href="https://bookdown.org/yihui/blogdown/">blogdown</a>, <a href="https://rstudio.github.io/distill/website.html">distill</a>, etc), create a new website project in RStudio with the appropriate files. Using quarto, you can also do it entirely from the command line. Just follow the instructions and choose <strong>terminal</strong> for your tool at the <a href="https://quarto.org/docs/websites/">quarto website</a>.</p>
+<p>If you are using <strong>quarto</strong>, from your parent folder (<em>git</em> in the example above), run (where you will replace mysite with “zool710-intro-…”):</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create-project mysite <span class="at">--type</span> website</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Edit the <strong>index.qmd</strong> file to add your personalized content. For example, you might include the following information:</p>
 <ul>
 <li><p>Write a short summary introducing yourself. Structure the webpage with headings, subheadings, etc. Talk a bit about yourself, your background, training, research interests. Let me/us know what kind of statistics, programming, data analysis experience you already have. I am also curious to know what you most hope to learn in this course.</p></li>
 <li><p>Five fun facts about yourself</p></li>
@@ -353,7 +372,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="deploy-your-website" class="level3">
 <h3 class="anchored" data-anchor-id="deploy-your-website">4. Deploy your website</h3>
-<p>Depending on how you want to deploy your website, the following may or may not be relevant to you. In general, you want to make sure you have initialized your project to use <code>git</code> (i.e.&nbsp;you can type <code>git init</code> to initialize the repository to use git. Add and commit your changes. Push your changes and deploy your website.</p>
+<p>Depending on how you want to deploy your website, the following may or may not be relevant to you. In general, you want to make sure you have: - Initialized your project to use <code>git</code> (i.e.&nbsp;you can type <code>git init</code> to initialize the repository to use git. - Add and commit your changes. - Push your changes and deploy your website.</p>
+</section>
+<section id="publish-your-website-using-github-pages" class="level3">
+<h3 class="anchored" data-anchor-id="publish-your-website-using-github-pages">5. Publish your website using GitHub pages</h3>
+<p>There are many ways you can publish a simple website for free. To use GitHub pages with quarto, follow the instructions here in the next link.</p>
+<p>Note! You really only need to follow the instructions in the one section called <a href="https://quarto.org/docs/publishing/github-pages.html#render-to-docs"><em>Render to docs</em></a>. Ignore the rest for now.</p>
 <p>Following steps 2-4, here is my example website:</p>
 <ul>
 <li>website: <a href="https://mbutler808.github.io/zool710-intro-marguerite-butler/" class="uri">https://mbutler808.github.io/zool710-intro-marguerite-butler/</a></li>
@@ -365,7 +389,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Go to Slack and write a short post with a link (URL) to your website (and URL to the corresponding GitHub repository) that you created.</li>
 <li>As you read the introductions from other folks in the class, feel free to comment/reply using Discussion board.</li>
 </ul>
-<p>In class on Feb 7, I will show as many websites as I can NA</p>
+<p>In class on Feb 7, I will show as many websites as I can ⭐️😍</p>
 
 
 </section>
