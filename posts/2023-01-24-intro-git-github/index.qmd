@@ -232,6 +232,25 @@ Your local files and your GitHub repository files are now synced!
 #| out-width: '80%'
 knitr::include_graphics("../../images/With-Git-all-contributors-have-a-copy-of-the-repo-with-all-files-and-the-full-history_W640.jpeg")
 ```
+
+# A word
+
+Sooner or later, you will encounter a merge conflict. That happens if the same file(s) changed both locally and on GitHub.com. That can happen if multiple people work on the same files, or if you work on multiple computers and forget to always push/pull before and after you work on a project. Donʻt get discouraged, this is solvable!
+
+Sometimes you have to do it manually. Moving the offending files out of your local repository, then doing the merge and after that adding the updates again can help. If you know that one source is the definite one, you can force a push or pull. A more advanced approach is to use branches.
+
+```{.bash filename=Terminal}
+git push --force
+```
+
+::: callout-warning
+- The main danger is that a force push or pull will force git to write over a conflict, and can possibly destroy someone elseʻs work. If youʻre the only one on the repo, then itʻs only your changes that youʻll lose
+- Just be aware but donʻt be afraid to practice. You can always revert back.
+- See the help page for [git push](https://git-scm.com/docs/git-push). See the -f or --force flag. Itʻs terse computer help, but if you make the effort it will start to make sense.
+- Iʻll link a more tutorial type resource later
+:::
+
+
 \[[Source: Jenny Bryan](https://peerj.com/preprints/3159/)]
 
 # Post-lecture materials
