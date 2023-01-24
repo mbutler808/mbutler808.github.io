@@ -354,7 +354,7 @@ Up one level, and over to another directory:
 ls ../AnotherDirectory
 ```
 
-You can wander anywhere along your computerʻs file directory! Just add more steps to the path. 
+You can wander anywhere along your computerʻs file directory! Just add more steps to the path.
 
 # Executing software from the command Line
 

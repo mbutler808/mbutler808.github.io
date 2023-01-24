@@ -15,7 +15,7 @@ For Qmd files (markdown document with [Quarto](https://quarto.org/docs/authoring
 |---------------|---------------|---------------|---------------|---------------|
 | **Module 1** |         | **Computational Tools for Data Science** |||
 ||||||
-| Week 1       | Jan 17  | `r emojifont::emoji('wave')` Installing R/RStudio, GitHvub \[[html](posts/2023-01-17-the-big-picture/index.qmd)\] \[[Qmd](https://github.com/mbutler808/mbutler808.github.io/tree/main/posts/2023-01-17-the-big-picture/index.qmd)\]                                                                                                              |  ||
+| Week 1       | Jan 17  | `r emojifont::emoji('wave')` Installing R/RStudio, GitHub \[[html](posts/2023-01-17-the-big-picture/index.qmd)\] \[[Qmd](https://github.com/mbutler808/mbutler808.github.io/tree/main/posts/2023-01-17-the-big-picture/index.qmd)\]                                                                                                              |  ||
 |              | Jan 19  | `r emojifont::emoji('woman_technologist')` Shell scripts, File Organization \[[html](posts/2023-01-19-your-computer-filesystems/index.qmd)\] \[[Qmd](https://github.com/mbutler808/mbutler808.github.io/tree/main/posts/2023-01-19-your-computer-filesystems/index.qmd)\] |||
 ||||||
 | **Module 2** |         | **Data Analysis in R ** |||
