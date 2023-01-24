@@ -20,7 +20,7 @@ For Qmd files (markdown document with [Quarto](https://quarto.org/docs/authoring
 ||||||
 | **Module 2** |         | **Data Analysis in R ** |||
 ||||||
-| Week 2       | Jan 24 | `r emojifont::emoji('octopus')` What is the Question? / Reproducible Research and Literate Programming |  `r emojifont::emoji('palm_tree')` Project 0  | |
+| Week 2       | Jan 24 | `r emojifont::emoji('octopus')` What is the Question? / Reproducible Research and Literate Programming |  `r emojifont::emoji('palm_tree')` Project 0 \[[html](projects/2023-01-24-project-0/index.qmd)\] \[[Qmd](https://github.com/mbutler808/mbutler808.github.io/blob/main/projects/2023-01-24-project-0/index.qmd)\]  | |
 |              | Jan 26  | `r emojifont::emoji('microscope')` Data management and workflow  | | |
 ||||||
 | Week 3       | Jan 31 | `r emojifont::emoji('eyeglasses')` Reading/Writing data | | |
@@ -59,7 +59,7 @@ For Qmd files (markdown document with [Quarto](https://quarto.org/docs/authoring
 ||||||
 | Week 11      | Mar 28   | `r emojifont::emoji('straight_ruler')` Linear Morphometrics, Size, Shape |||
 ||||||
-|              | Mar 30  | `r emojifont::emoji('trianglular_ruler')` Landmark-based Morphometrics |||
+|              | Mar 30  | `r emojifont::emoji('triangular_ruler')` Landmark-based Morphometrics |||
 ||||||
 | Week 12      | Apr 4  | `r emojifont::emoji('skull')` 3D Morphometrics |||
 |              | Apr 6  | `r emojifont::emoji('feet')` 3D Morphometrics |||
