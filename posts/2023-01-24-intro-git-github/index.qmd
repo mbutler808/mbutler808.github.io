@@ -54,11 +54,11 @@ This document gives a brief explanation of GitHub and how we will use it for thi
 ```{r}
 #| label: A-Solo-work-with-DIY-version-control-via-filename-B-Collaborative-work-with-DIY_W640.jpeg
 #| echo: false
-#| fig-cap: 'Everyone is one with the repo'
+#| fig-cap: 'Everyone is one with the repo and all changes are tracked'
 #| out-width: '80%'
 knitr::include_graphics("../../images/A-Solo-work-with-DIY-version-control-via-filename-B-Collaborative-work-with-DIY_W640.jpeg")
 ```
-\[[Source: Jenny Bryan](https://peerj.com/preprints/3159/)
+\[[Source: Jenny Bryan](https://peerj.com/preprints/3159/)]
 
 **GitHub** is an online server and user interface that also provides powerful tools for distribution of your repository, bug tracking, collaboration, and also allows you to create easy websites for each repository.
 
@@ -232,7 +232,7 @@ Your local files and your GitHub repository files are now synced!
 #| out-width: '80%'
 knitr::include_graphics("../../images/With-Git-all-contributors-have-a-copy-of-the-repo-with-all-files-and-the-full-history_W640.jpeg")
 ```
-\[[Source: Jenny Bryan](https://peerj.com/preprints/3159/)
+\[[Source: Jenny Bryan](https://peerj.com/preprints/3159/)]
 
 # Post-lecture materials
 
