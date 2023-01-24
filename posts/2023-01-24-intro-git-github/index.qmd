@@ -264,5 +264,3 @@ Here are some post-lecture questions to help you think about the material discus
 #| fig-cap-location: "top"
 knitr::include_graphics("https://github.com/djnavarro/art/raw/master/static/gallery/flametree/extra/001_flametree_20_13.jpg")
 ```
-
-\['Flametree' from Danielle Navarro <https://art.djnavarro.net>\]
